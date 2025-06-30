@@ -87,7 +87,7 @@ def create_app() -> Flask:
                 }
                 
                 # Call API endpoint
-                api_url = f"{config.API_BASE_URL}/api/csv2json"
+                api_url = f"{config.API_URL}/api/csv2json"
                 response = requests.post(api_url, json=api_data, timeout=30)
                 response.raise_for_status()
                 
