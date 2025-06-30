@@ -41,7 +41,7 @@ class UiConfig(BaseSettings):
     PORT: int = 8080
     
     # API Configuration for connecting to the CSV2JSON API
-    API_URL: str = "http://localhost:5000"
+    API_URL: str = Field(default="http://localhost:5000", env="MBXAI_API_URL")
     
     model_config = SettingsConfigDict(
         env_prefix="",

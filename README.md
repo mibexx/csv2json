@@ -60,7 +60,7 @@ These variables are prefixed with `CSV2JSON_`:
 
 You can configure the API URL that the UI connects to:
 
-- `API_URL`: Complete URL of the CSV2JSON API (default: "http://localhost:5000")
+- `MBXAI_API_URL`: Complete URL of the CSV2JSON API (default: "http://localhost:5000")
 
 This supports both HTTP and HTTPS URLs and can be set in your environment or in a `.env` file in the project root.
 
