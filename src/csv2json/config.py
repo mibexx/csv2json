@@ -41,13 +41,7 @@ class UiConfig(BaseSettings):
     PORT: int = 8080
     
     # API Configuration for connecting to the CSV2JSON API
-    API_HOST: str = "localhost"
-    API_PORT: int = 5000
-    
-    @property
-    def API_BASE_URL(self) -> str:
-        """Get the API base URL."""
-        return f"http://{self.API_HOST}:{self.API_PORT}"
+    API_URL: str = "http://localhost:5000"
     
     model_config = SettingsConfigDict(
         env_prefix="",

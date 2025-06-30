@@ -58,12 +58,11 @@ These variables are prefixed with `CSV2JSON_`:
 
 ### UI Configuration
 
-You can configure the API host and port that the UI connects to:
+You can configure the API URL that the UI connects to:
 
-- `API_HOST`: Host of the CSV2JSON API (default: "localhost")
-- `API_PORT`: Port of the CSV2JSON API (default: 5000)
+- `API_URL`: Complete URL of the CSV2JSON API (default: "http://localhost:5000")
 
-These can be set in your environment or in a `.env` file in the project root.
+This supports both HTTP and HTTPS URLs and can be set in your environment or in a `.env` file in the project root.
 
 ## Project Structure
 
