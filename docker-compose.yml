@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - "CSV2JSON_NAME=CSV 2 JSON"
+      - "CSV2JSON_LOG_LEVEL=20"
+      - "CSV2JSON_OPENROUTER_API_KEY=${OPENROUTER_API_KEY}"
+      - "CSV2JSON_OPENROUTER_BASE_URL=https://openrouter.ai/api/v1"
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped

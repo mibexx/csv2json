@@ -1,0 +1,19 @@
+apiVersion: mbxai.cloud/v1
+kind: MbxAiResource
+metadata:
+  name: "csv2json"
+  namespace: mbxai-sandbox
+spec:
+  name: "CSV 2 JSON"
+  repoUrl: "https://github.com/mibexx/csv2json"
+  key: "csv2json-key"
+  baseImage: "mibexx/mbxai-service:latest"
+  port: 5000
+  expose: false
+  runCommand: ["service"]
+  customEnvVars:
+    - "CSV2JSON_NAME": "CSV 2 JSON"
+    - "CSV2JSON_LOG_LEVEL": "INFO"
+  customSecrets:
+    - "CSV2JSON_OPENROUTER_API_KEY": "your-openrouter-api-key"
+    - "CSV2JSON_OPENROUTER_BASE_URL": "https://openrouter.ai/api/v1"
